@@ -1,0 +1,33 @@
+#GameOverWindow{
+    -fx-background-color: #B6E2A1;
+}
+#settingsMenuButton{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: transparent;
+}
+#settingsMenuButton:hover{
+    -fx-rotate: 60;
+    -fx-animated: 0.3s;
+    -fx-scale-x : 1.1;
+    -fx-scale-y: 1.1;
+}
+.button{
+    -fx-background-radius: 20px;
+    -fx-background-color: #e3e3e3;
+    -fx-font-family: Sacramento;
+    -fx-text-fill: #111;
+    -fx-text-alignment: center;
+    -fx-pref-height: 20px;
+    -fx-pref-width: 96px;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+}
+.button:hover{
+    -fx-background-color: #111;
+    -fx-text-fill: #fff;
+}
+.label{
+    -fx-font-family: Sacramento;
+}

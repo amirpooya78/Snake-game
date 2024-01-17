@@ -1,0 +1,12 @@
+{
+  "startingPosX": 15,
+  "startingPosY": 15,
+  "initialSnakeLength": 3,
+  "gameBoardSize": 31,
+  "startingDirection": "RIGHT",
+  "snakeSkin": "ONE",
+  "mapSkin": "ONE",
+  "soundEffectsOn": "true",
+  "difficulty": "MEDIUM",
+  "consumableSkin": "APPLE"
+}

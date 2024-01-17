@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="GameOverWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../cssStyles/GameOver.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snaked.controller.GameOverController">
+   <children>
+      <HBox alignment="CENTER" layoutX="200.0" layoutY="45.0" prefHeight="160.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="169.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="179.0" text="Game over!">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/snakeLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <Label fx:id="gameOverHighScore" prefHeight="36.0" prefWidth="100.0" text="0000">
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/scoreboardButton.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="gameOverCurrentScore" prefHeight="36.0" prefWidth="100.0" text="00000">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/apple.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="200.0" layoutY="205.0" prefHeight="120.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="129.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="restartGameButton" mnemonicParsing="false" onAction="#restartGameButtonClick" text="Restart">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#mainMenuButtonClick" text="Main Menu" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button id="settingsMenuButton" fx:id="settingsMenuButton" mnemonicParsing="false" onAction="#settingsMenuButtonClick" prefHeight="54.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/settings.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

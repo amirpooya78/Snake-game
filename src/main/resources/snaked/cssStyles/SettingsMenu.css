@@ -1,0 +1,48 @@
+#volumeButton {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-pref-width: 36;
+    -fx-pref-height: 36;
+    -fx-content-display: center;
+}
+#settingsWindow{
+    -fx-background-color: #FEBE8C;
+}
+
+.button{
+    -fx-background-radius: 20px;
+    -fx-background-color: transparent;
+    -fx-font-family: Sacramento;
+    -fx-text-fill: #111;
+    -fx-text-alignment: center;
+    -fx-pref-height: 20px;
+    -fx-pref-width: 68px;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+}
+.button:hover{
+    -fx-background-color: #111;
+    -fx-text-fill: #fff;
+}
+
+.label{
+    -fx-font-family: Sacramento;
+    -fx-alignment: center;
+    -fx-font-size: 14;
+}
+#settingsHeader{
+    -fx-font-family: Sacramento;
+    -fx-font-size: 36;
+    -fx-alignment: center;
+}
+#backButton{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: transparent;
+}
+#backButton:hover{
+    -fx-scale-x : 1.1;
+    -fx-scale-y: 1.1;
+}

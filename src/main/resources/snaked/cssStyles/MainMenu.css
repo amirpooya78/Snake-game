@@ -1,0 +1,24 @@
+#startButton:hover{
+    -fx-background-color:  #111111;
+    -fx-text-fill: #ffffff;
+}
+#startButton{
+    -fx-background-radius: 20px;
+    -fx-text-fill: #111111;
+    -fx-background-color: #F7A4A4;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+}
+#settingsButton:hover{
+    -fx-rotate: 60;
+    -fx-animated: 0.3s;
+    -fx-scale-x : 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#scoreboardButton:hover{
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+    -fx-animated: 0.3s;
+}

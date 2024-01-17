@@ -1,0 +1,164 @@
+@startuml Snaked
+top to bottom direction
+skinparam linetype polyline
+skinparam classAttributeIconSize 0
+
+enum BoardCell << enumeration >> {
+  + CONSUMABLE
+  + SNAKE_HEAD
+  + SNAKE_BODYPART
+}
+enum Difficulty << enumeration >> {
+  - Difficulty(ordinalRepresentation: int, scoreMultiplier: double, speedMultiplier: double)
+  + EASY
+  + MEDIUM
+  + HARD
+  - ordinalRepresentation: int
+  - scoreMultiplier: double
+  - speedMultiplier: double
+  + getOrdinalRepresentation(): int
+  + getScoreMultiplier(): double
+  + getSpeedMultiplier(): double
+}
+enum Direction << enumeration >> {
+  + UP
+  + RIGHT
+  + DOWN
+  + LEFT
+}
+
+class Coordinate {
+  - x: int
+  - y: int
+  + getX(): int
+  + getY(): int
+}
+
+class GameBoard {
+  - snakeCoords: List<Coordinate>
+  - consumableCoords: Coordinate
+  - currentDirection: Direction
+  + nextTurn(): boolean
+  + getScore(): int
+  + getBoardAsArray(): BoardCell[][]
+  - moveSnake(): void
+  - spawnConsumable(): void
+  - checkAlive(): boolean
+  - checkCoordsInsideGameBoard(coordinate: Coordinate): boolean
+}
+
+class GameOptions {
+  - snakeSkin: SnakeSkin
+  - mapSkin: MapSkin
+  - startingPosX: int
+  - initialSnakeLength: int
+  - startingPosY: int
+  - gameBoardWidth: int
+  - difficulty: Difficulty
+  - startingDirection: Direction
+  - gameBoardHeight: int
+  - soundEffectsOn: boolean
+  + getInitialSnakeLength(): int
+  + getStartingPosX(): int
+  + getStartingPosY(): int
+  + setGameBoardWidth(int): void
+  + setSoundEffectsOn(boolean): void
+  + setSnakeSkin(SnakeSkin): void
+  + setGameBoardHeight(int): void
+  + getGameBoardHeight(): int
+  + getGameBoardWidth(): int
+  + isSoundEffectsOn(): boolean
+  + setDifficulty(Difficulty): void
+  + setStartingPosY(int): void
+  + setMapSkin(MapSkin): void
+  + setStartingPosX(int): void
+  + getStartingDirection(): Direction
+  + getSnakeSkin(): SnakeSkin
+  + getDifficulty(): Difficulty
+  + setStartingDirection(Direction): void
+  + getMapSkin(): MapSkin
+  + setInitialSnakeLength(int): void
+  + toString(): String
+}
+
+class GameState {
+  - instance: GameState
+  - GameState(gameOptions: GameOptions):
+  - scores: List<Integer>
+  - logger: Logger
+  + SCORE_FILENAME: String
+  - randomGen: Random
+  - options: GameOptions
+  - snake: Snake
+  - gameBoard: GameBoard
+  + saveScores(): void
+  + getNHighestScores(int): List<Integer>
+  + loadScores(): void
+  + createInstance(InputStream): GameState
+  + addScore(int): void
+  + getInstance(): GameState
+  + getOptions(): GameOptions
+  + getSnake(): Snake
+  + getGameBoard(): GameBoard
+  + getRandomGen(): Random
+  + getLogger(): Logger
+  + setSnake(Snake): void
+  + setGameBoard(GameBoard): void
+}
+
+class Main {
+  + {static} main(String[]): void
+}
+
+class Snake {
+  + Snake(initialLength: int)
+  - initalLength: int
+  - eatenConsumables: int
+  + increaseEatenConsumables(): void
+  + getCurrentLength(): int
+  + getInitalLength(): int
+  + getEatenConsumables(): int
+}
+
+enum SnakeSkin << enumeration >> {
+  - SnakeSkin(ordinalRepresentation: int, headFilePath: Path, bodyFilePath: Path)
+  + ONE
+  + TWO
+  + THREE
+  - ordinalRepresentation: int
+  - headFilePath: Path
+  - bodyFilePath: Path
+  + getOrdinalRepresentation(): int
+  + getHeadFilePath(): Path
+  + getBodyFilePath(): Path
+}
+
+enum MapSkin << enumeration >> {
+  - SnakeSkin(ordinalRepresentation: int, mapFileName: Path)
+  + ONE
+  + TWO
+  + THREE
+  - ordinalRepresentation: int
+  - mapFileName: Path
+  + getOrdinalRepresentation(): int
+  + getMapFileName(): Path
+}
+
+together {
+  class Main
+  class GameBoard
+  class GameState
+}
+
+Main --> GameState
+GameBoard --> BoardCell
+GameBoard *--> Coordinate
+GameBoard *--> Direction
+GameOptions *--> Difficulty
+GameOptions *--> Direction
+GameOptions *--> MapSkin
+GameOptions *--> SnakeSkin
+GameState   *--> GameBoard
+GameState   *--> GameOptions
+GameState   *--> Snake
+@enduml

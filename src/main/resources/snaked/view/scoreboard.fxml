@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFBC1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snaked.controller.ScoreBoardController">
+   <children>
+      <Text layoutX="204.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Sacramento;" text="Scoreboard" wrappingWidth="192.3830966949463">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="255.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Sacramento;" text="1st :">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="251.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Sacramento;" text="2nd :">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="253.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Sacramento;" text="3rd :">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="253.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Sacramento;" text="5th :">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="253.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Sacramento;" text="4th :">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Button layoutX="26.0" layoutY="20.0" minWidth="34.0" mnemonicParsing="false" onAction="#returnToMenu" prefHeight="23.0" prefWidth="34.0" style="-fx-background-color: #FFFBC1;">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/snaked/Icons/backArrow.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ImageView fitHeight="68.0" fitWidth="77.0" layoutX="127.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/snaked/Icons/scoreboardButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="77.0" layoutX="405.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/snaked/Icons/scoreboardButton.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="highScores" alignment="TOP_LEFT" layoutX="300.0" layoutY="116.0" prefHeight="265.0" prefWidth="32.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="330.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pts">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="330.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pts">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="330.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pts">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="330.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pts">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="330.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pts">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
